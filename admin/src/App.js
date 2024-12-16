@@ -12,6 +12,7 @@ import { AuthContext } from "./context/AuthContext";
 import { hotelColumns, roomColumns, userColumns } from "./datatablesource";
 import NewHotel from "./pages/newHotel/NewHotel";
 import NewRoom from "./pages/newRoom/NewRoom";
+import NewUserForm from "./pages/newUserForm/NewUserForm"; // Import the NewUserForm Component
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -87,7 +88,7 @@ function App() {
                 path="new"
                 element={
                   <ProtectedRoute>
-                    <NewHotel  />
+                    <NewHotel />
                   </ProtectedRoute>
                 }
               />
@@ -113,11 +114,17 @@ function App() {
                 path="new"
                 element={
                   <ProtectedRoute>
-                    <NewRoom  />
+                    <NewRoom />
                   </ProtectedRoute>
                 }
               />
             </Route>
+
+            {/* New Route for User Registration */}
+            <Route
+              path="register"
+              element={<NewUserForm />} // Add Registration Component
+            />
           </Route>
         </Routes>
       </BrowserRouter>
