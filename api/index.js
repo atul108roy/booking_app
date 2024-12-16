@@ -13,6 +13,12 @@ const app= express();
 const port=process.env.PORT|| 8800;
 dotenv.config();
 
+app.use(cors({
+    origin: ["https://deploy-mern-1whq.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true
+}));
+
 const connect = async () => {
   try {
     await mongoose.connect(process.env.MONGO);
