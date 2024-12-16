@@ -1,0 +1,127 @@
+/* Container for the full screen */
+.login {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0071c2, #004d99); /* Gradient background */
+  color: #fff;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* Container for the form */
+.lContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increased gap for better spacing */
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow for a modern look */
+  width: 100%;
+  max-width: 450px; /* Restrict form width */
+}
+
+/* Header styling */
+.lContainer h2 {
+  color: #004d99; /* Dark blue color for the header */
+  text-align: center;
+  margin-bottom: 20px; /* Add space below header */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Inputs styling */
+.lInput {
+  height: 50px; /* Increased height for better usability */
+  padding: 10px;
+  border: 1px solid #ccc; /* Subtle border */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 16px; /* Larger font size */
+  outline: none; /* Remove default outline */
+  transition: all 0.3s ease; /* Smooth transition for hover/focus effects */
+}
+
+/* Hover and focus effects for inputs */
+.lInput:focus {
+  border-color: #0071c2; /* Highlight border on focus */
+  box-shadow: 0 0 8px rgba(0, 113, 194, 0.6); /* Subtle shadow on focus */
+}
+
+/* Button styling */
+.lButton {
+  border: none;
+  padding: 15px;
+  background: linear-gradient(135deg, #0071c2, #004d99); /* Gradient button background */
+  color: white;
+  font-weight: bold;
+  font-size: 16px; /* Larger font size for better readability */
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition on hover and click */
+}
+
+/* Hover and active effects for the button */
+.lButton:hover {
+  background: linear-gradient(135deg, #005f99, #003d66); /* Darker gradient on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.lButton:active {
+  transform: translateY(0); /* Button press effect */
+}
+
+/* Disabled button styling */
+.lButton:disabled {
+  background: #a0c6e1; /* Muted blue color */
+  cursor: not-allowed;
+}
+
+/* Error message styling */
+span {
+  color: #ff4d4d; /* Red color for error message */
+  font-size: 14px;
+  text-align: center;
+  margin-top: -10px; /* Adjust spacing */
+}
+
+/* Back button styling */
+.backButton {
+  text-align: center;
+  margin-top: 20px; /* Add space above the back button */
+}
+
+.backLink {
+  color: #0071c2; /* Blue color matching the theme */
+  text-decoration: none; /* Remove underline */
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.backLink:hover {
+  color: #005f99; /* Darker blue on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .lContainer {
+    padding: 30px;
+    width: 90%;
+  }
+
+  .lContainer h2 {
+    font-size: 20px;
+  }
+
+  .lButton {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .lInput {
+    height: 45px;
+    font-size: 14px;
+  }
+}

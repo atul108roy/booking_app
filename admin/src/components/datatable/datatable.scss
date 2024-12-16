@@ -1,0 +1,127 @@
+.datatable {
+  height: 600px;
+  padding: 20px;
+  background-color: #f9f9f9; /* Subtle background color for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for a modern look */
+
+  .datatableTitle {
+    width: 100%;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .link {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      background-color: green;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .link:hover {
+      background-color: darkgreen; /* Darker shade on hover */
+    }
+  }
+
+  .cellWithImg {
+    display: flex;
+    align-items: center;
+
+    .cellImg {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+  }
+
+  .cellWithStatus {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-transform: capitalize;
+
+    &.active {
+      background-color: rgba(0, 128, 0, 0.1);
+      color: green;
+    }
+    &.pending {
+      background-color: rgba(255, 217, 0, 0.1);
+      color: goldenrod;
+    }
+    &.passive {
+      background-color: rgba(255, 0, 0, 0.1);
+      color: crimson;
+    }
+  }
+
+  .cellAction {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .viewButton {
+      padding: 5px 10px;
+      border-radius: 5px;
+      color: white;
+      background-color: darkblue;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .viewButton:hover {
+      background-color: navy;
+    }
+
+    .deleteButton {
+      padding: 5px 10px;
+      border-radius: 5px;
+      color: white;
+      background-color: crimson;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .deleteButton:hover {
+      background-color: darkred;
+    }
+  }
+
+  .datagrid {
+    background-color: white;
+    border: none;
+    font-size: 14px;
+  
+    .MuiDataGrid-columnHeaders {
+      background-color: #f4f4f4;
+      font-weight: bold;
+      color: #333;
+    }
+  
+    .MuiDataGrid-cell {
+      white-space: nowrap; /* Prevent text wrapping */
+      text-overflow: ellipsis; /* Add ellipsis for overflow */
+      overflow: hidden;
+    }
+  
+    .MuiDataGrid-row {
+      &:hover {
+        background-color: #f1f1f1; /* Light gray on row hover */
+      }
+    }
+  }
+  
+  
+}
